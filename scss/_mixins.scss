@@ -1,0 +1,15 @@
+@mixin font($index: 1) {
+  $index: round($index);
+  @if $index < 1 {
+    $index: 1;
+  }
+  @if $index > length($font) {
+    $index: length($font);
+  }
+  font-size: nth($font, $index);
+  line-height: line-height($index);
+}
+@function line-height($index: 1) {
+  $font-size: nth($font, $index);
+  @return (floor($font-size / 10px) + 1) * 10px;
+}

@@ -242,8 +242,12 @@ main > section {
       float: left;
       margin-bottom: 0;
     }
+    @media (min-width: 768px) {
+      width: calc(100% / 2);
+    }
   }
-  @media (min-width: 768px) {
+
+  @media (min-width: 992px) {
     .map {
       width: calc(100% / 3 * 2);
     }
