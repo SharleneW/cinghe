@@ -1,0 +1,316 @@
+.main_banner {
+  background-image: url(../image/60667231-oiling-ball-bearing-close-up-isolated-on-white-background-3d-illustration.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  // margin-top: 60px;
+  @media (min-width: 768px) {
+    background-position: right bottom;
+    background-size: contain;
+    // margin-top: 71px;
+  }
+  @media (min-width: 1200px) {
+    background-size: 45%;
+  }
+  color: map-get($color, default);
+  // font-size: nth($font, 3);
+  letter-spacing: 1px;
+  height: 550px;
+  position: relative;
+  .bg_shadow {
+    height: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.1) 10%,
+      rgba(0, 0, 0, 0.05) 20%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(0, 0, 0, 0.05) 80%,
+      rgba(0, 0, 0, 0.1) 90%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+  }
+  .wrap {
+    height: 100%;
+    font-size: 0;
+    @media (min-width: 768px) {
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 0;
+        vertical-align: middle;
+      }
+    }
+  }
+  .main_title {
+    padding-top: 50px;
+    box-sizing: border-box;
+    font-size: nth($font, 2);
+    @media (min-width: 768px) {
+      padding-top: 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span {
+      display: block;
+      border-bottom: 1px solid map-get($color, light);
+      padding-bottom: 10px;
+    }
+    h2 {
+      padding-top: 10px;
+      padding-bottom: 15px;
+      font-size: nth($font, 7);
+      color: map-get($color, primary);
+      text-shadow: 0 0 0.3em map-get($color, white),
+        0 0 0.3em map-get($color, white), 0 0 0.3em map-get($color, white);
+    }
+    p {
+      color: map-get($color, dark);
+    }
+  }
+}
+
+.item_title {
+  text-align: center;
+  h2 {
+    margin-bottom: 40px;
+    font-size: nth($font, 5);
+  }
+  .separation_line {
+    position: relative;
+    display: block;
+    width: 300px;
+    height: 1px;
+    margin: 0 auto;
+    background-color: map-get($color, light);
+    margin-bottom: 60px;
+    &::after {
+      content: "";
+      width: 100px;
+      height: 5px;
+      position: absolute;
+      top: -2px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background-color: map-get($color, primary);
+    }
+  }
+  p {
+    @include font(3);
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+    text-align: left;
+  }
+}
+main > section {
+  .item {
+    width: 100%;
+    margin-bottom: 80px;
+    & + .item:last-child {
+      margin-bottom: 0;
+    }
+    @media (min-width: 768px) {
+      // width: 100%;
+    }
+    h3 {
+      font-size: nth($font, 4);
+    }
+    p {
+      @include font(2);
+    }
+  }
+}
+.item_group {
+  @extend %clearfix;
+}
+.about_us {
+  padding: 80px 0;
+  .item {
+    padding: 0 70px;
+    box-sizing: border-box;
+    text-align: center;
+    color: map-get($color, dark);
+    @media (min-width: 768px) {
+      width: calc(100% / 3);
+      float: left;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .item_icon {
+      color: map-get($color, primary);
+      margin-bottom: 50px;
+    }
+    h3 {
+      margin-bottom: 30px;
+    }
+  }
+}
+.products {
+  background-image: url(../image/97230226-view-from-the-bottom-oil-is-poured-onto-the-cutter-and-gear-part-the-machine-is-close-up-cogwheel-ma.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  .products_bg {
+    padding: 80px 0;
+    background-color: rgba(map-get($color, dark), 0.75);
+  }
+  h2,
+  .item_icon {
+    color: map-get($color, white);
+  }
+  .item {
+    padding: 0 15px;
+    box-sizing: border-box;
+    @media (min-width: 768px) {
+      width: calc(100% / 2);
+      float: left;
+    }
+    @media (min-width: 992px) {
+      width: calc(100% / 4);
+    }
+    h3 {
+      color: map-get($color, dark);
+    }
+    &:nth-child(odd) {
+      i,
+      .item_content {
+        background-color: map-get($color, primary);
+      }
+    }
+    &:nth-child(even) {
+      i,
+      .item_content {
+        background-color: map-get($color, secondary);
+      }
+    }
+  }
+  .item_icon {
+    text-align: center;
+    i {
+      border-radius: 50%;
+      padding: 10px;
+    }
+  }
+  .item_header {
+    margin-top: -25px;
+    padding-top: 110px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: map-get($color, white);
+  }
+  .item_content {
+    padding: 20px;
+    li {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    a {
+      display: block;
+      @include font(3);
+      color: map-get($color, white);
+      transition: color 0.5s;
+      &:hover {
+        color: map-get($color, dark);
+      }
+    }
+  }
+}
+
+.contact_us {
+  padding: 80px 0;
+  .item {
+    padding: 0 15px;
+    box-sizing: border-box;
+    @media (min-width: 768px) {
+      float: left;
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: 768px) {
+    .map {
+      width: calc(100% / 3 * 2);
+    }
+    .contact_data {
+      width: calc(100% / 3);
+    }
+  }
+
+  dl {
+    line-height: 1.5;
+  }
+  dt {
+    display: inline-block;
+    width: 75px;
+    vertical-align: top;
+    &.time {
+      width: 105px;
+    }
+    i {
+      color: map-get($color, primary);
+    }
+    span {
+      margin-left: 5px;
+      &::after {
+        content: " - ";
+      }
+    }
+  }
+  dd {
+    display: inline-block;
+    margin-bottom: 15px;
+    width: calc(100% - 85px);
+    word-break: break-all;
+    &.time {
+      width: calc(100% - 115px);
+    }
+  }
+
+  .phone {
+    > li {
+      display: inline;
+      &::after {
+        content: "、";
+      }
+      &:last-child::after {
+        content: "";
+      }
+    }
+  }
+  a {
+    color: map-get($color, default);
+    &:hover {
+      color: map-get($color, primary);
+    }
+  }
+}
+
+body {
+  position: relative;
+}
+.goto {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  a {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    background-color: map-get($color, primary);
+    border-radius: 50%;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  i {
+    color: map-get($color, white);
+  }
+}

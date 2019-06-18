@@ -1,0 +1,10 @@
+footer {
+  background-color: map-get($color, dark);
+  padding: 30px 0;
+  text-align: center;
+  @include font(1);
+  color: map-get($color, light);
+  span {
+    color: map-get($color, primary);
+  }
+}

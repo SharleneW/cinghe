@@ -1,0 +1,31 @@
+$font: 14px 16px 20px 30px 40px 45px 65px;
+$color: (
+  default: #707070,
+  primary: #17a6bf,
+  secondary: #e3c915,
+  white: #fff,
+  light: #ddd,
+  dark: #333333
+);
+%clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+@mixin font($index: 1) {
+  $index: round($index);
+  @if $index < 1 {
+    $index: 1;
+  }
+  @if $index > length($font) {
+    $index: length($font);
+  }
+  font-size: nth($font, $index);
+  line-height: line-height($index);
+}
+@function line-height($index: 1) {
+  $font-size: nth($font, $index);
+  @return (floor($font-size / 10px) + 1) * 10px;
+}
