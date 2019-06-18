@@ -48,6 +48,8 @@
     padding-top: 50px;
     box-sizing: border-box;
     font-size: nth($font, 2);
+    text-shadow: 0 0 0.5em map-get($color, white),
+      0 0 0.5em map-get($color, white), 0 0 0.5em map-get($color, white);
     @media (min-width: 768px) {
       padding-top: 0;
       display: inline-block;
@@ -61,10 +63,9 @@
     h2 {
       padding-top: 10px;
       padding-bottom: 15px;
-      font-size: nth($font, 7);
+      // font-size: nth($font, 6);
+      @include font(6);
       color: map-get($color, primary);
-      text-shadow: 0 0 0.3em map-get($color, white),
-        0 0 0.3em map-get($color, white), 0 0 0.3em map-get($color, white);
     }
     p {
       color: map-get($color, dark);
@@ -81,15 +82,16 @@
   .separation_line {
     position: relative;
     display: block;
-    width: 300px;
+    width: 100px;
     height: 1px;
     margin: 0 auto;
     background-color: map-get($color, light);
     margin-bottom: 60px;
     &::after {
       content: "";
-      width: 100px;
+      width: 50px;
       height: 5px;
+      border-radius: 3px;
       position: absolute;
       top: -2px;
       left: 0;
@@ -167,9 +169,18 @@ main > section {
     @media (min-width: 768px) {
       width: calc(100% / 2);
       float: left;
+      margin-bottom: 80px;
+      &:nth-child(3),
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
     @media (min-width: 992px) {
       width: calc(100% / 4);
+      &:first-child,
+      &:nth-child(2) {
+        margin-bottom: 0;
+      }
     }
     h3 {
       color: map-get($color, dark);
