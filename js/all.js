@@ -18,7 +18,7 @@ $(function() {
         .fadeOut("fast");
     }
 
-    if ($(this).window < 768) {
+    if ($(this).width < 768) {
       $("#main_menu").slideUp(function() {
         $("#sideBar > i")
           .find("[data-fa-i2svg]")
