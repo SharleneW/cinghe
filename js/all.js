@@ -18,11 +18,13 @@ $(function() {
         .fadeOut("fast");
     }
 
-    $("#main_menu").slideUp(function() {
-      $("#sideBar > i")
-        .find("[data-fa-i2svg]")
-        .toggleClass("fa-bars");
-    });
+    if ($(this).window < 768) {
+      $("#main_menu").slideUp(function() {
+        $("#sideBar > i")
+          .find("[data-fa-i2svg]")
+          .toggleClass("fa-bars");
+      });
+    }
 
     // if ($(this).scrollTop() > 0) {
     //   $("#navGroup").css({ position: "fixed", top: 0 });
