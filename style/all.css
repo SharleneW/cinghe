@@ -159,7 +159,7 @@ main > section .item p { font-size: 16px; line-height: 20px; }
 
 .products .item_icon { text-align: center; }
 
-.products .item_icon i { border-radius: 50%; padding: 10px; }
+.products .item_icon i { display: inline-block; border-radius: 50%; padding: 10px; }
 
 .products .item_header { margin-top: -25px; padding-top: 110px; padding-bottom: 20px; text-align: center; background-color: #fff; }
 

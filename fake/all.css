@@ -560,6 +560,7 @@ main > section .item p {
 }
 
 .products .item_icon i {
+  display: inline-block;
   border-radius: 50%;
   padding: 10px;
 }

@@ -190,6 +190,7 @@ main > section {
   .item_icon {
     text-align: center;
     i {
+      display: inline-block;
       border-radius: 50%;
       padding: 10px;
     }
