@@ -32,9 +32,9 @@ $(function() {
     //   $("#navGroup").css({ position: "static" });
     // }
   });
-  $("#sideBar > i").on("click", function() {
+  $("#sideBar").on("click", function() {
     $("#main_menu").slideToggle();
-    $(this)
+    $("#sideBar > i")
       .find("[data-fa-i2svg]")
       .toggleClass("fa-times")
       .toggleClass("fa-bars");
