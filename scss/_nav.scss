@@ -155,9 +155,10 @@ a {
 
 .nav {
   // position: fixed;
-  // left: 0;
-  // right: 0;
-  // z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   font-size: 0;
   background-color: map-get($color, dark);
   @media (min-width: 768px) {
@@ -186,7 +187,6 @@ a {
       display: block;
     }
   }
-
   a {
     display: block;
     padding: 20px;

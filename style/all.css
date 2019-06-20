@@ -89,7 +89,7 @@ a { text-decoration: none; }
 
 .info-group ul li:last-child .data { padding-right: 40px; }
 
-.nav { font-size: 0; background-color: #333333; }
+.nav { top: 0; left: 0; right: 0; z-index: 1; font-size: 0; background-color: #333333; }
 
 @media (min-width: 768px) { .nav { text-align: center; } }
 

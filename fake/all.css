@@ -333,6 +333,10 @@ a {
 }
 
 .nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
   font-size: 0;
   background-color: #333333;
 }
