@@ -36,8 +36,8 @@ $(function() {
     $("#main_menu").slideToggle();
     $("#sideBar > i")
       .find("[data-fa-i2svg]")
-      .toggleClass("fa-times")
-      .toggleClass("fa-bars");
+      .toggleClass("fa-bars")
+      .toggleClass("fa-times");
   });
   $(window).on("resize", function() {
     if ($(this).width() > 768) {
