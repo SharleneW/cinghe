@@ -1,16 +1,15 @@
 $(function() {
-  $("#goto").on("goto", function() {
+  $("#goto").on("click", function() {
     $("html, body").animate(
       {
         scrollTop: 0
       },
-      2000,
-      "easeOutBounce"
+      800
     );
-    return false;
   });
   $(window).on("scroll", function() {
-    if ($(this).scrollTop() > 300) {
+    // 滾動時 頁面距離頂部 > 300 go-to-top 淡出 否則 淡入
+    if ($(this).scrollTop() > 200) {
       $("#goto").fadeIn("fast");
     } else {
       $("#goto")
@@ -18,6 +17,7 @@ $(function() {
         .fadeOut("fast");
     }
 
+    // width < 768 滾動時 navigation 隱藏
     if ($(this).width() < 768) {
       $("#main_menu").slideUp(function() {
         $("#sideBar > i")
@@ -26,6 +26,7 @@ $(function() {
       });
     }
 
+    // navigation 滾動時固定在頂部
     if ($(this).scrollTop() > 0) {
       $("#navGroup").addClass("fixed");
     } else {
@@ -33,6 +34,7 @@ $(function() {
     }
   });
 
+  // width < 768 navigation 隱藏或打開
   $("#sideBar").on("click", function() {
     $("#main_menu").slideToggle();
     $("#sideBar > i")
@@ -41,6 +43,7 @@ $(function() {
       .toggleClass("fa-times");
   });
 
+  // 偵測瀏覽器寬度變化，當width > 768 navigation 打開 否則 關閉
   $(window).on("resize", function() {
     if ($(this).width() > 768) {
       $("#main_menu").css("display", "block");
