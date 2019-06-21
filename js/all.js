@@ -27,11 +27,12 @@ $(function() {
     }
 
     if ($(this).scrollTop() > 0) {
-      $("#navGroup").css({ position: "fixed" });
+      $("#navGroup").addClass("fixed");
     } else {
-      $("#navGroup").css({ position: "static" });
+      $("#navGroup").removeClass("fixed");
     }
   });
+
   $("#sideBar").on("click", function() {
     $("#main_menu").slideToggle();
     $("#sideBar > i")
@@ -39,6 +40,7 @@ $(function() {
       .toggleClass("fa-bars")
       .toggleClass("fa-times");
   });
+
   $(window).on("resize", function() {
     if ($(this).width() > 768) {
       $("#main_menu").css("display", "block");

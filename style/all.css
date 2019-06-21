@@ -41,6 +41,8 @@ a { text-decoration: none; }
 
 @media (min-width: 768px) { .desktop { display: block; } }
 
+.fixed { position: fixed; }
+
 .info-area { border-bottom: 1px solid #ddd; }
 
 .info-area .info { float: left; }

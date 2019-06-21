@@ -37,6 +37,9 @@ a {
     display: block;
   }
 }
+.fixed {
+  position: fixed;
+}
 
 .info-area {
   border-bottom: 1px solid map-get($color, light);

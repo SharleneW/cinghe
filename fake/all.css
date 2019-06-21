@@ -205,6 +205,10 @@ a {
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .info-area {
   border-bottom: 1px solid #ddd;
 }
