@@ -4,12 +4,12 @@ $(function() {
       {
         scrollTop: 0
       },
-      800
+      600
     );
   });
   $(window).on("scroll", function() {
     // 滾動時 頁面距離頂部 > 300 go-to-top 淡出 否則 淡入
-    if ($(this).scrollTop() > 200) {
+    if ($(this).scrollTop() > 300) {
       $("#goto").fadeIn("fast");
     } else {
       $("#goto")
