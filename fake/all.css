@@ -407,6 +407,10 @@ a {
   }
 }
 
+.nav a > .active {
+  color: #17a6bf;
+}
+
 .main_banner {
   background-image: url(../image/60667231-oiling-ball-bearing-close-up-isolated-on-white-background-3d-illustration.jpg);
   background-repeat: no-repeat;
@@ -579,6 +583,7 @@ main > section .item p {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .products .products_bg {
