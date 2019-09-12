@@ -19,8 +19,8 @@ $(function() {
       var targetPos = $(target).offset().top;
       var targetHeight = $(target).outerHeight();
       // console.log(targetPos, targetHeight);
-      console.log(targetPos + targetHeight > scrollTop);
-      if (targetPos - 1 <= scrollTop && targetPos + targetHeight > scrollTop) {
+      // console.log(targetPos + targetHeight > scrollTop);
+      if (targetPos - 71 <= scrollTop && targetPos + targetHeight > scrollTop) {
         $(".scrollTop").removeClass("active");
         $(this).addClass("active");
       } else {
@@ -55,23 +55,23 @@ $(function() {
   });
 
   // width < 768 navigation 隱藏或打開
-  // $("#sideBar").on("click", function() {
-  //   $("#main_menu").slideToggle();
-  //   $("#sideBar > i")
-  //     .find("[data-fa-i2svg]")
-  //     .toggleClass("fa-bars")
-  //     .toggleClass("fa-times");
-  // });
+  $("#sideBar").on("click", function() {
+    $("#main_menu").slideToggle();
+    $("#sideBar > i")
+      .find("[data-fa-i2svg]")
+      .toggleClass("fa-bars")
+      .toggleClass("fa-times");
+  });
 
-  // // 偵測瀏覽器寬度變化，當width > 768 navigation 打開 否則 關閉
-  // $(window).on("resize", function() {
-  //   if ($(this).width() > 768) {
-  //     $("#main_menu").css("display", "block");
-  //   } else {
-  //     $("#main_menu").css("display", "none");
-  //     $("#sideBar > i")
-  //       .find("[data-fa-i2svg]")
-  //       .toggleClass("fa-bars");
-  //   }
-  // });
+  // 偵測瀏覽器寬度變化，當width > 768 navigation 打開 否則 關閉
+  $(window).on("resize", function() {
+    if ($(this).width() > 768) {
+      $("#main_menu").css("display", "block");
+    } else {
+      $("#main_menu").css("display", "none");
+      $("#sideBar > i")
+        .find("[data-fa-i2svg]")
+        .toggleClass("fa-bars");
+    }
+  });
 });

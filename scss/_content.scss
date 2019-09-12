@@ -165,8 +165,10 @@ main > section {
     color: map-get($color, white);
   }
   .item {
+    position: relative;
     padding: 0 15px;
     box-sizing: border-box;
+
     @media (min-width: 768px) {
       width: calc(100% / 2);
       float: left;
@@ -184,23 +186,30 @@ main > section {
       }
     }
     h3 {
-      color: map-get($color, dark);
+      color: map-get($color, white);
+      transition: all 1.5s;
     }
     &:nth-child(odd) {
-      i,
       .item_content {
         background-color: map-get($color, primary);
       }
     }
     &:nth-child(even) {
-      i,
       .item_content {
         background-color: map-get($color, secondary);
       }
     }
   }
+
   .item_icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     text-align: center;
+    margin-bottom: 15px;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 1.5s;
     i {
       display: inline-block;
       border-radius: 50%;
@@ -208,11 +217,22 @@ main > section {
     }
   }
   .item_header {
-    margin-top: -25px;
-    padding-top: 110px;
-    padding-bottom: 20px;
+    // margin-top: -25px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     text-align: center;
-    background-color: map-get($color, white);
+    background-color: map-get($color, primary);
+    transition: all 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: map-get($color, secondary);
+      .item_icon {
+        opacity: 1;
+      }
+      h3 {
+        opacity: 0;
+      }
+    }
   }
   .item_content {
     padding: 20px;

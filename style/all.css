@@ -113,7 +113,7 @@ a { text-decoration: none; }
 
 @media (min-width: 768px) { .nav a { display: inline-block; padding: 27px; } }
 
-.nav a > .active { color: #17a6bf; }
+.nav .active { color: #17a6bf; }
 
 .main_banner { background-image: url(../image/60667231-oiling-ball-bearing-close-up-isolated-on-white-background-3d-illustration.jpg); background-repeat: no-repeat; background-position: center center; background-size: cover; color: #707070; letter-spacing: 1px; height: 550px; position: relative; }
 
@@ -171,7 +171,7 @@ main > section .item p { font-size: 16px; line-height: 20px; }
 
 .products h2, .products .item_icon { color: #fff; }
 
-.products .item { padding: 0 15px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+.products .item { position: relative; padding: 0 15px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 @media (min-width: 768px) { .products .item { width: calc(100% / 2); float: left; margin-bottom: 80px; }
   .products .item:nth-child(3), .products .item:last-child { margin-bottom: 0; } }
@@ -179,17 +179,23 @@ main > section .item p { font-size: 16px; line-height: 20px; }
 @media (min-width: 992px) { .products .item { width: calc(100% / 4); }
   .products .item:first-child, .products .item:nth-child(2) { margin-bottom: 0; } }
 
-.products .item h3 { color: #333333; }
+.products .item h3 { color: #fff; -webkit-transition: all 1.5s; transition: all 1.5s; }
 
-.products .item:nth-child(odd) i, .products .item:nth-child(odd) .item_content { background-color: #17a6bf; }
+.products .item:nth-child(odd) .item_content { background-color: #17a6bf; }
 
-.products .item:nth-child(even) i, .products .item:nth-child(even) .item_content { background-color: #e3c915; }
+.products .item:nth-child(even) .item_content { background-color: #e3c915; }
 
-.products .item_icon { text-align: center; }
+.products .item_icon { position: absolute; top: 50%; left: 50%; text-align: center; margin-bottom: 15px; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); opacity: 0; -webkit-transition: all 1.5s; transition: all 1.5s; }
 
 .products .item_icon i { display: inline-block; border-radius: 50%; padding: 10px; }
 
-.products .item_header { margin-top: -25px; padding-top: 110px; padding-bottom: 20px; text-align: center; background-color: #fff; }
+.products .item_header { padding-top: 100px; padding-bottom: 100px; text-align: center; background-color: #17a6bf; -webkit-transition: all 0.5s; transition: all 0.5s; cursor: pointer; }
+
+.products .item_header:hover { background-color: #e3c915; }
+
+.products .item_header:hover .item_icon { opacity: 1; }
+
+.products .item_header:hover h3 { opacity: 0; }
 
 .products .item_content { padding: 20px; }
 
