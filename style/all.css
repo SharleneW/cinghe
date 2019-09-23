@@ -254,6 +254,49 @@ body { position: relative; }
 
 .goto i { color: #fff; }
 
+.p_item_list { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: #fff; overflow-y: auto; z-index: 100; }
+
+.p_item_list .wrap { margin-top: 150px; margin-bottom: 50px; }
+
+.p_item_list .btn_close { cursor: pointer; position: absolute; right: 32px; top: 32px; width: 32px; height: 32px; opacity: 0.3; }
+
+.p_item_list .btn_close::before, .p_item_list .btn_close::after { content: ""; height: 33px; width: 2px; position: absolute; left: 15px; background-color: #333; }
+
+.p_item_list .btn_close::before { -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.p_item_list .btn_close::after { -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
+
+.p_item_list .item-2 .item_group:first-child, .p_item_list .item-2 .item_group:nth-child(2) { margin-bottom: 15px; }
+
+.p_item_list .item-2 .item { float: left; }
+
+.p_item_list .item-2 .item + .item { margin-left: 15px; }
+
+@media (min-width: 768px) { .p_item_list .item-2 .item { width: 100%; }
+  .p_item_list .item-2 .item:nth-child(3), .p_item_list .item-2 .item:last-child { margin-bottom: 0; } }
+
+@media (min-width: 992px) { .p_item_list .item-2 .item { width: calc(100% / 2 - 15px); } }
+
+.p_item_list .item-3 .item { float: left; border-width: 0; background-color: initial; }
+
+.p_item_list .item-3 .item + .item { margin-left: 15px; border-left: 1px solid #ddd; }
+
+@media (min-width: 992px) { .p_item_list .item-3 .item { width: calc(100% / 3 - 10px); } }
+
+.p_item_list .item-3 .item_group { border: 1px solid #ddd; background-color: #fff; }
+
+.p_item_list .item { position: relative; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #ddd; background-color: #fff; }
+
+.p_item_list .item_header { background-color: #17a6bf; color: #fff; text-align: center; padding: 20px 0; }
+
+.p_item_list .item_content { margin-top: 20px; margin-bottom: 20px; }
+
+.p_item_list ul { margin: 0 15px; }
+
+.p_item_list li { margin-bottom: 10px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+
+.p_item_list a { cursor: none; color: #333333; }
+
 footer { background-color: #333333; padding: 30px 0; text-align: center; font-size: 14px; line-height: 20px; color: #ddd; }
 
 footer span { color: #17a6bf; }

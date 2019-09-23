@@ -1,3 +1,6 @@
+* {
+  // outline: 1px solid red;
+}
 .main_banner {
   background-image: url(../image/60667231-oiling-ball-bearing-close-up-isolated-on-white-background-3d-illustration.jpg);
   background-repeat: no-repeat;
@@ -349,5 +352,118 @@ body {
   }
   i {
     color: map-get($color, white);
+  }
+}
+
+.p_item_list {
+  .wrap {
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  overflow-y: auto;
+  z-index: 100;
+  .btn_close {
+    cursor: pointer;
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    &::before,
+    &::after {
+      content: "";
+      height: 33px;
+      width: 2px;
+      position: absolute;
+      left: 15px;
+      background-color: #333;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+  .item-2 {
+    .item_group {
+      &:first-child,
+      &:nth-child(2) {
+        margin-bottom: 15px;
+      }
+    }
+    .item {
+      float: left;
+      & + .item {
+        margin-left: 15px;
+      }
+      @media (min-width: 768px) {
+        width: 100%;
+        // margin-bottom: 80px;
+        &:nth-child(3),
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      @media (min-width: 992px) {
+        width: calc(100% / 2 - 15px);
+      }
+    }
+  }
+  .item-3 {
+    .item {
+      float: left;
+      border-width: 0;
+      background-color: initial;
+      & + .item {
+        margin-left: 15px;
+        border-left: 1px solid map-get($color, light);
+      }
+      @media (min-width: 992px) {
+        width: calc(100% / 3 - 10px);
+      }
+    }
+    .item_group {
+      border: 1px solid map-get($color, light);
+      background-color: map-get($color, white);
+    }
+  }
+  .item {
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid map-get($color, light);
+    background-color: map-get($color, white);
+  }
+
+  .item_header {
+    background-color: map-get($color, primary);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .item_content {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  ul {
+    margin: 0 15px;
+  }
+  li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid map-get($color, light);
+  }
+
+  a {
+    cursor: none;
+    color: map-get($color, dark);
   }
 }

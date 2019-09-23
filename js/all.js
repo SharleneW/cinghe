@@ -74,4 +74,29 @@ $(function() {
         .toggleClass("fa-bars");
     }
   });
+
+  $("#product_cate1").on("click", function() {
+    $("#product1").css("display", "block");
+    $("html").css("overflow-y", "hidden");
+  });
+  $("#product_cate2").on("click", function() {
+    $("#product2").css("display", "block");
+    $("html").css("overflow-y", "hidden");
+  });
+  $("#product_cate3").on("click", function() {
+    $("#product3").css("display", "block");
+    $("html").css("overflow-y", "hidden");
+  });
+  $("#product_cate4").on("click", function() {
+    $("#product4").css("display", "block");
+    $("html").css("overflow-y", "hidden");
+  });
+
+  $(".btn_close").on("click", function() {
+    $("#product1").css("display", "none");
+    $("#product2").css("display", "none");
+    $("#product3").css("display", "none");
+    $("#product4").css("display", "none");
+    $("html").css("overflow", "auto");
+  });
 });
