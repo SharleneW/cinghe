@@ -925,6 +925,20 @@ body {
           box-sizing: border-box;
   border: 1px solid #ddd;
   background-color: #fff;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .p_item_list .item {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .p_item_list .item {
+    width: 60%;
+  }
 }
 
 .p_item_list .item_header {
