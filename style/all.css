@@ -159,7 +159,9 @@ main > section .item p { font-size: 16px; line-height: 20px; }
 
 .about_us p { margin: 0 15px; text-align: left; }
 
-@media (min-width: 768px) { .about_us p { width: 60%; margin: 0 auto; text-align: center; } }
+@media (min-width: 768px) { .about_us p { width: 70%; margin: 0 auto; } }
+
+.about_us p + p { margin-top: 10px; }
 
 .about_us .item { padding: 0 70px; -webkit-box-sizing: border-box; box-sizing: border-box; text-align: center; color: #333333; }
 
@@ -260,7 +262,7 @@ body { position: relative; }
 
 .p_item_list { display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; background-color: #fff; overflow-y: auto; z-index: 100; }
 
-.p_item_list .wrap { margin-top: 150px; margin-bottom: 150px; }
+.p_item_list .wrap { margin-top: 100px; margin-bottom: 100px; }
 
 .p_item_list .btn_close { cursor: pointer; position: absolute; right: 32px; top: 32px; width: 32px; height: 32px; opacity: 0.3; }
 
