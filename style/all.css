@@ -107,6 +107,8 @@ a { text-decoration: none; }
 
 .nav a { display: block; padding: 20px; background-color: #333333; border-bottom: 1px solid rgba(221, 221, 221, 0.3); color: #fff; font-size: 16px; -webkit-transition: color 0.3s; transition: color 0.3s; }
 
+@media (min-width: 768px) { .nav a { border-bottom-width: 0; } }
+
 .nav a:last-child { border-bottom-width: 0; }
 
 .nav a:hover { color: #17a6bf; }
@@ -133,7 +135,7 @@ a { text-decoration: none; }
 
 .main_banner .main_title span { display: block; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
 
-.main_banner .main_title h2 { padding-top: 10px; padding-bottom: 15px; font-size: 47px; line-height: 50px; color: #17a6bf; }
+.main_banner .main_title h1 { padding-top: 10px; padding-bottom: 15px; font-size: 47px; line-height: 50px; color: #17a6bf; }
 
 .main_banner .main_title p { color: #333333; }
 

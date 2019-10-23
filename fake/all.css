@@ -392,6 +392,12 @@ a {
   transition: color 0.3s;
 }
 
+@media (min-width: 768px) {
+  .nav a {
+    border-bottom-width: 0;
+  }
+}
+
 .nav a:last-child {
   border-bottom-width: 0;
 }
@@ -478,7 +484,7 @@ a {
   padding-bottom: 10px;
 }
 
-.main_banner .main_title h2 {
+.main_banner .main_title h1 {
   padding-top: 10px;
   padding-bottom: 15px;
   font-size: 47px;

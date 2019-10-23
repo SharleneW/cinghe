@@ -195,6 +195,9 @@ a {
     padding: 20px;
     background-color: map-get($color, dark);
     border-bottom: 1px solid rgba(map-get($color, light), 0.3);
+    @media (min-width: 768px) {
+      border-bottom-width: 0;
+    }
     &:last-child {
       border-bottom-width: 0;
     }
