@@ -32,6 +32,18 @@
 
       gtag('config', 'UA-150919968-1');
     </script>
+
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : 1408418782670650,
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v4.0'
+        });
+      };
+    </script>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
   </head>
   <body>
     <header>
@@ -444,27 +456,15 @@
     <div id="goto" class="goto">
       <a href="#"><i class="fas fa-chevron-up fa-3x"></i></a>
     </div>
-    <div class="fb_msg">
-      <div class="fb-customerchat"
-        page_id=469773613230699
-        minimized="true">
-      </div>
+    <div class="fb-customerchat"
+      page_id="469773613230699"
+      minimized="true">
     </div>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v4.0&appId=285389534939644&autoLogAppEvents=1"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   
     <script src="js/all.js"></script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v4.0&appId=285389534939644&autoLogAppEvents=1"></script>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          appId            : 1408418782670650,
-          autoLogAppEvents : true,
-          xfbml            : true,
-          version          : 'v4.0'
-        });
-      };
-    </script>
-    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
-    
     
   </body>
 </html>
