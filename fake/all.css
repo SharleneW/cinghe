@@ -478,14 +478,18 @@ a {
   }
 }
 
-.main_banner .main_title span {
+.main_banner .main_title h1 span {
   display: block;
   border-bottom: 1px solid #ddd;
+  font-size: 16px;
+  font-weight: normal;
   padding-bottom: 10px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #707070;
 }
 
 .main_banner .main_title h1 {
-  padding-top: 10px;
   padding-bottom: 15px;
   font-size: 47px;
   line-height: 50px;

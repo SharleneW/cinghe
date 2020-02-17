@@ -58,13 +58,18 @@
       display: inline-block;
       vertical-align: middle;
     }
-    span {
+    h1 span {
       display: block;
       border-bottom: 1px solid map-get($color, light);
+      font-size: nth($font, 2);
+      font-weight: normal;
       padding-bottom: 10px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: map-get($color, default);
     }
     h1 {
-      padding-top: 10px;
+      // padding-top: 20px;
       padding-bottom: 15px;
       // font-size: nth($font, 6);
       @include font(6);
